@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LED app</string>
+    <string-array name="choices">
+        <item>Off</item>
+        <item>Solid</item>
+        <item>Rainbow</item>
+        <item>Rainbow Cycle</item>
+    </string-array>
+
+    <item name="red" type="id" />
+    <item name="green" type="id" />
+    <item name="blue" type="id" />
+    <item name="spinner" type="id" />
+    <item name="fab" type="id" />
+</resources>
