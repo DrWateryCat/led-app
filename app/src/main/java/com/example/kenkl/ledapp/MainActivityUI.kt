@@ -32,10 +32,11 @@ class MainActivityUI : AnkoComponent<MainActivity>, AnkoLogger{
                 id = R.id.red
                 progressDrawable.colorFilter = PorterDuffColorFilter(Color.RED, PorterDuff.Mode.SRC_IN)
                 thumb.colorFilter = PorterDuffColorFilter(Color.RED, PorterDuff.Mode.SRC_IN)
+                max = 255
                 onSeekBarChangeListener {
-                    onProgressChanged { seekBar, it, b ->
-                        info("Progress: $it")
-                        sendData(ControlData("red", it))
+                    onStopTrackingTouch {
+                        info("Progress: $progress")
+                        sendData(ControlData("red", progress))
                     }
                 }
             }.lparams {
@@ -48,10 +49,11 @@ class MainActivityUI : AnkoComponent<MainActivity>, AnkoLogger{
                 id = R.id.green
                 progressDrawable.colorFilter = PorterDuffColorFilter(Color.GREEN, PorterDuff.Mode.SRC_IN)
                 thumb.colorFilter = PorterDuffColorFilter(Color.GREEN, PorterDuff.Mode.SRC_IN)
+                max = 255
                 onSeekBarChangeListener {
-                    onProgressChanged { seekBar, it, b ->
-                        info("Progress: $it")
-                        sendData(ControlData("green", it))
+                    onStopTrackingTouch {
+                        info("Progress: $progress")
+                        sendData(ControlData("green", progress))
                     }
                 }
             }.lparams {
@@ -65,10 +67,11 @@ class MainActivityUI : AnkoComponent<MainActivity>, AnkoLogger{
                 id = R.id.blue
                 progressDrawable.colorFilter = PorterDuffColorFilter(Color.BLUE, PorterDuff.Mode.SRC_IN)
                 thumb.colorFilter = PorterDuffColorFilter(Color.BLUE, PorterDuff.Mode.SRC_IN)
+                max = 255
                 onSeekBarChangeListener {
-                    onProgressChanged { seekBar, it, b ->
-                        info("Progress: $it")
-                        sendData(ControlData("blue", it))
+                    onStopTrackingTouch {
+                        info("Progress: $progress")
+                        sendData(ControlData("blue", progress))
                     }
                 }
             }.lparams {
